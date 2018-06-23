@@ -9,6 +9,7 @@ class App extends Component {
         <div id="page-top" className="App" data-spy="scroll" data-target=".navbar-fixed-top">
 
             <Navigation/>
+            <Header/>
 
             <Projects/>
             <About/>
