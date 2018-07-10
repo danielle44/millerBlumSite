@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Footer, Navigation, Header, About, Projects, Contact } from './components';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Footer, Navigation, About, Projects, Contact } from './components';
 
 class App extends Component {
 
@@ -8,13 +9,17 @@ class App extends Component {
     return (
         <div id="page-top" className="App" data-spy="scroll" data-target=".navbar-fixed-top">
 
-            <Navigation/>
-            <Header/>
+            <Router>
+                <div>
+                    <Navigation/>
 
-            <Projects/>
-            <About/>
-            <Contact/>
+                    <Route exact path="/projects" component={Projects} />
+                    <Route path="/about" component={About} />
+                    <Route path="/contact" component={Contact} />
 
+                </div>
+
+            </Router>
             <Footer/>
 
         </div>

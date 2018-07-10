@@ -22,3 +22,5 @@ yarn-error.log*
 
 # source theme
 /public/theme
+
+.idea/
