@@ -1,5 +1,5 @@
 import Footer from './Footer';
-import Navigation from './Navigation';
+import Navigation from './navigation/Navigation';
 import Header from './Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
