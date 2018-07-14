@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import NavigationLogo from './NavigationLogo';
 import NavigationItem from './NavigationItem';
 
@@ -12,7 +11,6 @@ const navItems = [
 class Navigation extends Component {
     constructor(props) {
         super(props);
-
         this.createNavItem = this.createNavItem.bind(this);
     }
 
