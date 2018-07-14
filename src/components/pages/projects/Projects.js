@@ -6,10 +6,13 @@ import ProjectItem from './projecttem';
 class Projects extends Component {
     constructor(props) {
         super(props);
-        this.createProjectLightItem = this.createProjectLightItem.bind(this);
+        this.createProjectItem = this.createProjectItem.bind(this);
+        this.createFilterItem = this.createFilterItem.bind(this);
+        this.createFilters = this.createFilters.bind(this);
+        this.addEmptyFilter = this.addEmptyFilter.bind(this);
     }
 
-    createProjectLightItem({ title, thumbnail, categories }) {
+    createProjectItem({ title, thumbnail, categories }) {
         return (
             <ProjectItem
                 title={title}
@@ -17,6 +20,29 @@ class Projects extends Component {
                 categories={categories}
             />
         )
+    }
+
+    createFilterItem({ title, filter }) {
+        return (
+            <li><a href="#" data-filter={filter}>{title}</a></li>
+        )
+    }
+
+    createFilters() {
+        let filters = projectCategoriesData
+            .map((category) => ({
+            title: category.title,
+            filter: `.${category.id}`
+        }));
+
+        filters = this.addEmptyFilter(filters);
+        return filters.map(this.createFilterItem);
+    }
+
+    addEmptyFilter(filters) {
+        let noFilters = {title: 'All', filter: '*'};
+        filters = [noFilters, ...filters];
+        return filters;
     }
 
     render() {
@@ -31,10 +57,7 @@ class Projects extends Component {
                         <ul className="cat">
                             <li>
                                 <ol className="type">
-                                    <li><a href="#" data-filter="*" className="active">All</a></li>
-                                    <li><a href="#" data-filter=".lorem">Lorem Ipsum</a></li>
-                                    <li><a href="#" data-filter=".dolor">Dolor Sit</a></li>
-                                    <li><a href="#" data-filter=".adipiscing">Adipiscing Elit</a></li>
+                                    {this.createFilters()}
                                 </ol>
                             </li>
                         </ul>
@@ -42,7 +65,7 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            {projectsLightData.map(this.createProjectLightItem)}
+                            {projectsLightData.map(this.createProjectItem)}
                         </div>
                     </div>
                 </div>
