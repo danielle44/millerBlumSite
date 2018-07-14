@@ -1,6 +1,6 @@
 import Footer from './Footer';
 import Navigation from './navigation/Navigation';
-import Header from './Header';
+import Intro from './pages/Intro';
 import About from './pages/About';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/Contact';
@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 export {
     Footer,
     Navigation,
-    Header,
+    Intro,
     About,
     Projects,
     Contact

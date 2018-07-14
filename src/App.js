@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Footer, Navigation, About, Projects, Contact } from './components';
+import { Footer, Navigation, About, Projects, Contact, Intro } from './components';
 
 class App extends Component {
 
@@ -13,7 +13,8 @@ class App extends Component {
                 <div>
                     <Navigation/>
 
-                    <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/" component={Intro} />
+                    <Route path="/projects" component={Projects} />
                     <Route path="/about" component={About} />
                     <Route path="/contact" component={Contact} />
 
