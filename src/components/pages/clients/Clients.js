@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {clientsData} from '../../../mocks/clients';
 import ClientItem from './ClientItem';
 
-class About extends Component {
+class Clients extends Component {
     constructor(props) {
         super(props);
         this.createClientItem = this.createClientItem.bind(this);
@@ -30,4 +30,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Clients;

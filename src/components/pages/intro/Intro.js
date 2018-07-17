@@ -51,6 +51,7 @@ class Intro extends Component {
             <header id="header">
                 {introImages.map((imgName, index) => (
                     <IntroImage
+                        key={index}
                         imageName={imgName}
                         shouldShow={this.getNextIndex() === index}
                     />

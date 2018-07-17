@@ -10,7 +10,7 @@ class IntroImage extends Component {
 
     backgroundImageStyle() {
         return {
-            'background-image': `url(../img/intro/${this.props.imageName})`
+            'backgroundImage': `url(../img/intro/${this.props.imageName})`
         };
     }
 
