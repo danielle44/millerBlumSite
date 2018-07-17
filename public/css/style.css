@@ -532,3 +532,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 20px;
 }
 }
+
+.hidden {
+	display:none;
+}

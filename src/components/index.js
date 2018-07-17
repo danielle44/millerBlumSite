@@ -1,6 +1,6 @@
 import Footer from './Footer';
 import Navigation from './navigation/Navigation';
-import Intro from './pages/Intro';
+import Intro from './pages/intro/Intro';
 import About from './pages/About';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/Contact';

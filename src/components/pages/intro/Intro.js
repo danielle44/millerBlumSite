@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import IntroImage from './IntroImage';
 
 let introImages = [
     '1.jpg',
@@ -48,18 +49,12 @@ class Intro extends Component {
     render() {
         return (
             <header id="header">
-                <div className="intro" style={this.backgroundImageStyle()}>
-                    <div className="overlay">
-                        <div className="container">
-                            <div className="row">
-                                <div className="intro-text"> <span>Welcome to</span>
-                                    <h1>Miller-Blum</h1>
-                                    <p>Landscape Architecture</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {introImages.map((imgName, index) => (
+                    <IntroImage
+                        imageName={imgName}
+                        shouldShow={this.getNextIndex() === index}
+                    />
+                ))}
             </header>
         );
     }

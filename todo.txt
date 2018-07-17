@@ -1,0 +1,4 @@
+scss
+colors in scss
+fix console errors
+split css files
