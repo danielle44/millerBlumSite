@@ -231,6 +231,7 @@ header .intro-text {
 }
 ul.cat li {
 	display: inline-block;
+	cursor: pointer;
 }
 ol.type li {
 	display: inline-block;

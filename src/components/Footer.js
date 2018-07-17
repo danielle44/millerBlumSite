@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
             <div id="footer">
                 <div className="container text-center">
-                    <p><span class="en">MILLER-BLUM</span> | <span class="he">מילר-בלום</span></p>
+                    <p><span className="en">MILLER-BLUM</span> | <span className="he">מילר-בלום</span></p>
                 </div>
             </div>
         );

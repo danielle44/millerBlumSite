@@ -11,7 +11,7 @@ class Contact extends Component {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                     </div>
                     <div className="col-md-8 col-md-offset-2">
-                        <form name="sentMessage" id="contactForm" novalidate>
+                        <form name="sentMessage" id="contactForm">
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="form-group">

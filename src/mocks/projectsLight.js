@@ -24,7 +24,7 @@ export const projectsLightData = [
         categories: ['malls']
     },
     {
-        id: 4,
+        id: 5,
         title: 'Lebeniot',
         thumbnail: "/img/projects/Lebeniot/lebeniot.jpg",
         categories: ['parks']

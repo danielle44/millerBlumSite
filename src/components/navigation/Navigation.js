@@ -17,7 +17,7 @@ class Navigation extends Component {
 
     createNavItem({route, title}) {
         return (
-            <NavigationItem route={route} title={title}/>
+            <NavigationItem key={route} route={route} title={title}/>
         )
     }
 

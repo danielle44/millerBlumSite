@@ -12,9 +12,10 @@ class Projects extends Component {
         this.addEmptyFilter = this.addEmptyFilter.bind(this);
     }
 
-    createProjectItem({ title, thumbnail, categories }) {
+    createProjectItem({ id, title, thumbnail, categories }) {
         return (
             <ProjectItem
+                key={id}
                 title={title}
                 thumbnail={thumbnail}
                 categories={categories}
@@ -24,7 +25,7 @@ class Projects extends Component {
 
     createFilterItem({ title, filter }) {
         return (
-            <li><a href="#" data-filter={filter}>{title}</a></li>
+            <li key={filter}><a data-filter={filter}>{title}</a></li>
         )
     }
 
