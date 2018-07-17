@@ -8,31 +8,64 @@ class Contact extends Component {
                     <div className="section-title center">
                         <h2>Contact Us</h2>
                         <hr/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                     </div>
-                    <div className="col-md-8 col-md-offset-2">
-                        <form name="sentMessage" id="contactForm">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <input type="text" id="name" className="form-control" placeholder="Name" required="required"/>
-                                        <p className="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <input type="email" id="email" className="form-control" placeholder="Email" required="required"/>
-                                        <p className="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <textarea name="message" id="message" className="form-control" rows="4" placeholder="Message" required></textarea>
-                                <p className="help-block text-danger"></p>
-                            </div>
-                            <div id="success"></div>
-                            <button type="submit" className="btn btn-custom btn-lg">Send Message</button>
-                        </form>
+                    <div className="col-md-5 contact-half">
+                        <p>Tel Aviv Office</p>
+
+                        <div className="row">
+                            <p className="row">
+                                <span className="pairKey">Email: </span>
+                                <span className="pairValue">mbtlv@mbtlv.com</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Address: </span>
+                                <span className="pairValue">23 Aminadav, Tel Aviv</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Telephone: </span>
+                                <span className="pairValue">+972-3-1111111</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Fax: </span>
+                                <span className="pairValue">02323232</span>
+                            </p>
+                        </div>
+
+                        <p className="row">
+                            <img  src="/img/contact/tel aviv.jpg" className="img-responsive" alt="map tlv"/>
+                        </p>
+                    </div>
+
+                    <div className="col-md-5 col-md-offset-2 contact-half">
+                        <p>Haifa Office</p>
+                        <div className="row">
+                            <p className="row">
+                                <span className="pairKey">Email: </span>
+                                <span className="pairValue">mbtlv@mbtlv.com</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Address: </span>
+                                <span className="pairValue">23 Aminadav, Tel Aviv</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Telephone: </span>
+                                <span className="pairValue">+972-3-1111111</span>
+                            </p>
+
+                            <p className="row">
+                                <span className="pairKey">Fax: </span>
+                                <span className="pairValue">02323232</span>
+                            </p>
+                        </div>
+
+                        <p className="row">
+                            <img  src="/img/contact/haifa.jpg" className="img-responsive" alt="map tlv"/>
+                        </p>
                     </div>
                 </div>
             </div>
