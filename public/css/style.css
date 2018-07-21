@@ -32,7 +32,7 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: rgb(183,245,121);
+	color: #9cc932;
 }
 a:hover, a:focus {
 	text-decoration: none;
@@ -68,7 +68,7 @@ hr {
 	width: 70px;
 	text-align: center;
 	position: relative;
-	background: rgb(183,245,121);
+	background: #9cc932;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	border: 0;
@@ -90,7 +90,7 @@ hr {
     margin-left: 0;
 }
 #menu a.navbar-brand:hover {
-	color: rgb(183,245,121);
+	color: #9cc932;
 }
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
@@ -100,7 +100,7 @@ hr {
 	letter-spacing: 1px;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
-	color: rgb(183,245,121);
+	color: #9cc932;
 }
 .on {
 	background-color: rgba(0,0,0,0.8) !important;
@@ -114,8 +114,8 @@ hr {
 	border-radius: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: rgb(183,245,121);
-	border-color: rgb(183,245,121);
+	background-color: #9cc932;
+	border-color: #9cc932;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
@@ -130,18 +130,18 @@ hr {
 .btn-custom {
 	text-transform: uppercase;
 	color: #fff;
-	background-color: rgb(183,245,121);
+	background-color: #9cc932;
 	padding: 14px 20px;
 	margin: 0;
 	font-size: 15px;
 	border-radius: 0;
 	margin-top: 20px;
 	transition: all 0.3s;
-	border-top: 4px solid rgb(183,245,121);
+	border-top: 4px solid #9cc932;
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 	color: #fff;
-	background-color: rgb(183,245,121);
+	background-color: #9cc932;
 }
 /* Intro Section */
 .intro {
@@ -193,7 +193,7 @@ header .intro-text {
 }
 #about .about-text h3 {
 	font-weight: 400;
-	color: rgb(183,245,121);
+	color: #9cc932;
 }
 #about img {
 	float: right;
@@ -207,7 +207,7 @@ header .intro-text {
 	padding: 120px 0;
 }
 #services h4 {
-	color: rgb(183,245,121);
+	color: #9cc932;
 	text-transform: uppercase;
 }
 #services i.fa {
@@ -218,7 +218,7 @@ header .intro-text {
 	width: 100px;
 	height: 100px;
 	padding: 30px 0;
-	background: rgb(183,245,121);
+	background: #9cc932;
 	border-radius: 50%;
 }
 /* Portfolio Section */
@@ -241,15 +241,15 @@ ol.type li {
 ol.type li a {
 	color: #rgb(183,245,121);
 	padding: 10px 20px;
-	border: 1px solid rgb(183,245,121);
+	border: 1px solid #9cc932;
 	text-transform: uppercase;
 }
 ol.type li a.active {
-	background: rgb(183,245,121);
+	background: #9cc932;
 	color: #fff;
 }
 ol.type li a:hover {
-	background: rgb(183,245,121);
+	background: #9cc932;
 	color: #fff;
 }
 .isotope-item {
@@ -420,12 +420,12 @@ ol.type li a:hover {
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
 	filter: Alpha(Opacity=100);
 	opacity: 1;
-	background: rgb(183,245,121);
-	border: 1px solid rgb(183,245,121);
+	background: #9cc932;
+	border: 1px solid #9cc932;
 }
 .owl-theme .owl-controls .owl-page.active span {
-	background: rgb(183,245,121);
-	border: 1px solid rgb(183,245,121);
+	background: #9cc932;
+	border: 1px solid #9cc932;
 }
 /* Contact Section */
 #contact {
@@ -461,7 +461,7 @@ label {
 	transition: none;
 }
 #contact .form-control:focus {
-	border-color: rgb(183,245,121);
+	border-color: #9cc932;
 	outline: 0;
 	-webkit-box-shadow: transparent;
 	box-shadow: transparent;
@@ -488,7 +488,7 @@ color: #2c3e50;
 #contact .social i.fa {
 	font-size: 28px;
 	padding: 4px;
-	color: rgb(183,245,121);
+	color: #9cc932;
 	transition: all 0.3s;
 }
 #contact .social i.fa:hover {
@@ -546,4 +546,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .navbar-brand img {
     width: 348px;
     margin: 2px 0 2px 0;
+}
+
+.portfolio-item .hover-bg {
+    border-radius: 50%;
+    width: 195px;
+}
+
+.portfolio-item .hover-bg img {
+    max-width: 150%;
 }
