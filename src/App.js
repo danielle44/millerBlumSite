@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Footer, Navigation, About, Projects, Contact, Clients, Intro } from './components';
+import { Footer, Navigation, About, Projects, Contact, Clients, Intro, MyGrid } from './components';
 
 class App extends Component {
 
@@ -18,6 +18,7 @@ class App extends Component {
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/clients" component={Clients} />
+                        <Route path="/myGrid" component={MyGrid} />
                     </div>
                 </div>
             </Router>

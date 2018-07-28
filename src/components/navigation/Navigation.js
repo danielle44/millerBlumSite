@@ -6,7 +6,8 @@ const navItems = [
     { route: "/projects", title: "Projects" },
     { route: "/about", title: "About Us" },
     { route: "/contact", title: "Contact Us" },
-    { route: "/clients", title: "Clients" }
+    { route: "/clients", title: "Clients" },
+    { route: "/myGrid", title: "My Grid" }
 ];
 
 class Navigation extends Component {

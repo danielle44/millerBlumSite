@@ -2,4 +2,3 @@ scss
 colors in scss
 fix console errors
 split css files
-make grid item 100% (<ReactGridLayout width={1170})
