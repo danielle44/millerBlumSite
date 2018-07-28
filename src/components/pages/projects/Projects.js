@@ -1,28 +1,14 @@
 import React, { Component } from 'react';
-import ReactGridLayout from 'react-grid-layout';
-import _ from 'underscore';
-import {projectsLightData} from '../../../mocks/projectsLight';
+import ProjectsGrid from '../ProjectsGrid/ProjectsGrid';
 import {projectCategoriesData} from '../../../mocks/projectCategories';
-import ProjectItem from './projecttem';
+import {projectsLightData} from '../../../mocks/projectsLight';
 
 class Projects extends Component {
     constructor(props) {
         super(props);
-        this.createProjectItem = this.createProjectItem.bind(this);
         this.createFilterItem = this.createFilterItem.bind(this);
         this.createFilters = this.createFilters.bind(this);
         this.addEmptyFilter = this.addEmptyFilter.bind(this);
-    }
-
-    createProjectItem({ id, title, thumbnail, categories }) {
-        return (
-            <ProjectItem
-                key={id}
-                title={title}
-                thumbnail={thumbnail}
-                categories={categories}
-            />
-        )
     }
 
     createFilterItem({ title, filter }) {
@@ -68,7 +54,7 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            {projectsLightData.map(this.createProjectItem)}
+                            <ProjectsGrid projects={projectsLightData.concat(projectsLightData).concat(projectsLightData).concat(projectsLightData).concat(projectsLightData)}/>
                         </div>
                     </div>
                 </div>

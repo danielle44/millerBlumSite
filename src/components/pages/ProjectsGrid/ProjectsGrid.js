@@ -1,14 +1,15 @@
 import ReactGridLayout from 'react-grid-layout';
 import React, {Component} from 'react';
-import _ from 'underscore';
+import ProjectsGridItem from './ProjectsGridItem';
 
-class MyGrid extends Component {
+class ProjectsGrid extends Component {
     static defaultProps = {
         className: "layout",
         isDraggable: false,
         isResizable: false,
-        items: 50,
-        cols: 12,
+        projects: [],
+        cols: 5,
+        itemWidth: 1,
         rowHeight: 30,
         onLayoutChange: function() {}
     };
@@ -21,10 +22,15 @@ class MyGrid extends Component {
     }
 
     generateDOM() {
-        return _.map(_.range(this.props.items), function(i) {
+        return this.props.projects.map(function(project) {
             return (
-                <div key={i}>
-                    <span className="text">{i}</span>
+                <div key={project.id}>
+                    <ProjectsGridItem
+                        key={project.id}
+                        title={project.title}
+                        thumbnail={project.thumbnail}
+                        categories={project.categories}
+                    />
                 </div>
             );
         });
@@ -32,13 +38,13 @@ class MyGrid extends Component {
 
     generateLayout() {
         const p = this.props;
-        return _.map(new Array(p.items), function(item, i) {
-            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1;
+        return p.projects.map(function(item, i) {
+            var h = Math.ceil(Math.random() * 4) + 1;
             return {
-                x: (i * 2) % 12,
-                y: Math.floor(i / 6) * y,
-                w: 2,
-                h: y,
+                x: (i * p.itemWidth) % p.cols,
+                y: Math.floor(i / p.cols) * h,
+                w: p.itemWidth,
+                h: h,
                 i: i.toString()
             };
         });
@@ -51,7 +57,7 @@ class MyGrid extends Component {
     render() {
         return (
             <ReactGridLayout
-                width={1500}
+                width={1170}
                 layout={this.state.layout}
                 onLayoutChange={this.onLayoutChange}
                 {...this.props}
@@ -62,4 +68,4 @@ class MyGrid extends Component {
     }
 }
 
-export default MyGrid;
+export default ProjectsGrid;
