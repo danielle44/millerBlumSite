@@ -5,6 +5,7 @@ import About from './pages/About';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/Contact';
 import Clients from './pages/clients/Clients';
+import ProjectsGrid from './pages/projects/ProjectsGrid';
 
 export {
     Footer,
@@ -13,5 +14,6 @@ export {
     About,
     Projects,
     Contact,
-    Clients
+    Clients,
+    ProjectsGrid
 };
