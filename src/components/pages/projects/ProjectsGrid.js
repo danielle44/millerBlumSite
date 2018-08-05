@@ -2,35 +2,26 @@ import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Measure from 'react-measure';
 import SelectedProject from './SelectedProject';
-
-const photos = [
-    { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 4, height: 3, text: 'a' },
-    { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1, text: 'b' },
-    { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 3, height: 4, text: 'c' },
-    { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 3, height: 4 },
-    { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 3, height: 4 },
-    { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 4, height: 3 },
-    { src: 'https://source.unsplash.com/zh7GEuORbUw/600x799', width: 3, height: 4 },
-    { src: 'https://source.unsplash.com/PpOHJezOalU/800x599', width: 4, height: 3 },
-    { src: 'https://source.unsplash.com/I1ASdgphUH4/800x599', width: 4, height: 3 }
-];
+import {decorateProjects} from './ProjectsDecorator';
 
 class ProjectsGrid extends React.Component {
-    constructor() {
-        super();
-        this.state = { width: -1, photos: photos, selectAll: false };
+    constructor(props) {
+        super(props);
+
+        this.state = { width: -1, projects: decorateProjects(props.projects), selectAll: false };
+
         this.selectPhoto = this.selectPhoto.bind(this);
         this.toggleSelect = this.toggleSelect.bind(this);
     }
 
     selectPhoto(event, obj) {
-        let photos = this.state.photos;
+        let photos = this.state.projects;
         photos[obj.index].selected = !photos[obj.index].selected;
         this.setState({ photos: photos });
     }
 
     toggleSelect() {
-        let photos = this.state.photos.map((photo, index) => { return { ...photo, selected: !this.state.selectAll } });
+        let photos = this.state.projects.map((photo, index) => { return { ...photo, selected: !this.state.selectAll } });
         this.setState({ photos: photos, selectAll: !this.state.selectAll });
     }
 
@@ -54,7 +45,7 @@ class ProjectsGrid extends React.Component {
                             columns = 4;
                         }
                         return <div ref={measureRef}>
-                            <Gallery photos={this.state.photos} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedProject} />
+                            <Gallery photos={this.state.projects} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedProject} />
                         </div>
                     }
                 }

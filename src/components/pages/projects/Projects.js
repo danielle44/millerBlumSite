@@ -1,27 +1,14 @@
 import React, { Component } from 'react';
 import {projectsLightData} from '../../../mocks/projectsLight';
 import {projectCategoriesData} from '../../../mocks/projectCategories';
-import ProjectItem from './projecttem';
 import ProjectsGrid from './ProjectsGrid';
 
 class Projects extends Component {
     constructor(props) {
         super(props);
-        this.createProjectItem = this.createProjectItem.bind(this);
         this.createFilterItem = this.createFilterItem.bind(this);
         this.createFilters = this.createFilters.bind(this);
         this.addEmptyFilter = this.addEmptyFilter.bind(this);
-    }
-
-    createProjectItem({ id, title, thumbnail, categories }) {
-        return (
-            <ProjectItem
-                key={id}
-                title={title}
-                thumbnail={thumbnail}
-                categories={categories}
-            />
-        )
     }
 
     createFilterItem({ title, filter }) {
@@ -67,7 +54,7 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            <ProjectsGrid/>
+                            <ProjectsGrid projects={projectsLightData}/>
                         </div>
                     </div>
                 </div>
