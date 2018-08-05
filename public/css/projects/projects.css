@@ -61,3 +61,17 @@ ol.type li a:hover {
     padding: 5px;
     color: #E87E04;
 }
+#about img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    height: 650px;
+}
+#about .about-text {
+    background-color: #9cc932;
+    left: -150px;
+    top: 90px;
+    padding: 57px 79px;
+    max-width: 625px;
+    display: inline-block;
+    position: absolute;
+}
