@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {projectsLightData} from '../../../mocks/projectsLight';
 import {projectCategoriesData} from '../../../mocks/projectCategories';
 import ProjectItem from './projecttem';
+import ProjectsGrid from './ProjectsGrid';
 
 class Projects extends Component {
     constructor(props) {
@@ -66,7 +67,7 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            {projectsLightData.map(this.createProjectItem)}
+                            <ProjectsGrid/>
                         </div>
                     </div>
                 </div>

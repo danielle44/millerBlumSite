@@ -1,12 +1,12 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Measure from 'react-measure';
-import SelectedImage from './SelectedImage';
+import SelectedProject from './SelectedProject';
 
 const photos = [
-    { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 4, height: 3 },
-    { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1 },
-    { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 3, height: 4 },
+    { src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width: 4, height: 3, text: 'a' },
+    { src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width: 1, height: 1, text: 'b' },
+    { src: 'https://source.unsplash.com/qDkso9nvCg0/600x799', width: 3, height: 4, text: 'c' },
     { src: 'https://source.unsplash.com/iecJiKe_RNg/600x799', width: 3, height: 4 },
     { src: 'https://source.unsplash.com/epcsn8Ed8kY/600x799', width: 3, height: 4 },
     { src: 'https://source.unsplash.com/NQSWvyVRIJk/800x599', width: 4, height: 3 },
@@ -54,8 +54,7 @@ class ProjectsGrid extends React.Component {
                             columns = 4;
                         }
                         return <div ref={measureRef}>
-                            <p><button className="toggle-select" onClick={this.toggleSelect}>toggle select all</button></p>
-                            <Gallery photos={this.state.photos} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedImage} />
+                            <Gallery photos={this.state.photos} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedProject} />
                         </div>
                     }
                 }
