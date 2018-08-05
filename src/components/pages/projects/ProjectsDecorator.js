@@ -1,8 +1,9 @@
 const ratios = [
-    {width: 4, height: 3},
     {width: 1, height: 1},
-    {width: 3, height: 4},
-    {width: 1, height: 2}
+    {width: 4, height: 3},
+    {width: 5, height: 3},
+    {width: 7, height: 3},
+    {width: 5, height: 6},
 ];
 
 export function decorateProjects(projects) {

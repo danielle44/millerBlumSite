@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {projectsLightData} from '../../../mocks/projectsLight';
+import {get as getProjects} from './ProjectsProvider';
 import {projectCategoriesData} from '../../../mocks/projectCategories';
 import ProjectsGrid from './ProjectsGrid';
 
@@ -54,7 +54,7 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            <ProjectsGrid projects={projectsLightData}/>
+                            <ProjectsGrid projects={getProjects()}/>
                         </div>
                     </div>
                 </div>

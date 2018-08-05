@@ -36,13 +36,13 @@ class ProjectsGrid extends React.Component {
                         }
                         let columns = 1;
                         if (width >= 480){
-                            columns = 2;
-                        }
-                        if (width >= 1024){
                             columns = 3;
                         }
+                        if (width >= 1024){
+                            columns = 5;
+                        }
                         if (width >= 1824){
-                            columns = 4;
+                            columns = 7;
                         }
                         return <div ref={measureRef}>
                             <Gallery photos={this.state.projects} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedProject} />
