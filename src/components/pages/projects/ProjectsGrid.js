@@ -9,20 +9,6 @@ class ProjectsGrid extends React.Component {
         super(props);
 
         this.state = { width: -1, projects: addDimensions(props.projects), selectAll: false };
-
-        this.selectPhoto = this.selectPhoto.bind(this);
-        this.toggleSelect = this.toggleSelect.bind(this);
-    }
-
-    selectPhoto(event, obj) {
-        let photos = this.state.projects;
-        photos[obj.index].selected = !photos[obj.index].selected;
-        this.setState({ photos: photos });
-    }
-
-    toggleSelect() {
-        let photos = this.state.projects.map((photo, index) => { return { ...photo, selected: !this.state.selectAll } });
-        this.setState({ photos: photos, selectAll: !this.state.selectAll });
     }
 
     render() {
@@ -45,7 +31,7 @@ class ProjectsGrid extends React.Component {
                             columns = 7;
                         }
                         return <div ref={measureRef}>
-                            <Gallery photos={this.state.projects} columns={columns} onClick={this.selectPhoto} ImageComponent={ProjectsItem} />
+                            <Gallery photos={this.state.projects} columns={columns} ImageComponent={ProjectsItem} />
                         </div>
                     }
                 }

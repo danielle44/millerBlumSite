@@ -36,7 +36,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <div id="portfolio">
+            <div id="portfolio" className='page'>
                 <div className="container">
                     <div className="section-title text-center center">
                         <h2>Projects</h2>

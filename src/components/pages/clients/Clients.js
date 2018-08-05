@@ -14,7 +14,7 @@ class Clients extends Component {
 
     render() {
         return (
-            <div id="services" className="text-center">
+            <div id="services" className="text-center page">
                 <div className="container">
                     <div className="col-md-10 col-md-offset-1 section-title">
                         <h2>Our Clients</h2>
