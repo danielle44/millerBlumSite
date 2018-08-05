@@ -8,8 +8,8 @@ class Clients extends Component {
         this.createClientItem = this.createClientItem.bind(this);
     }
 
-    createClientItem({ title, logo }) {
-        return <ClientItem title={title} logo={logo}/>;
+    createClientItem({ id, title, logo }) {
+        return <ClientItem key={id} title={title} logo={logo}/>;
     }
 
     render() {
