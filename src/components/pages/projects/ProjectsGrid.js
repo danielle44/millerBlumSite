@@ -2,13 +2,13 @@ import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Measure from 'react-measure';
 import SelectedProject from './SelectedProject';
-import {decorateProjects} from './ProjectsDecorator';
+import {addDimensions} from './DimensionsAdder';
 
 class ProjectsGrid extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { width: -1, projects: decorateProjects(props.projects), selectAll: false };
+        this.state = { width: -1, projects: addDimensions(props.projects), selectAll: false };
 
         this.selectPhoto = this.selectPhoto.bind(this);
         this.toggleSelect = this.toggleSelect.bind(this);

@@ -6,9 +6,9 @@ const ratios = [
     {width: 5, height: 6},
 ];
 
-export function decorateProjects(projects) {
-    return projects.map(project => {
-        return {...project, ...getDimension(), src: project.thumbnail};
+export function addDimensions(items) {
+    return items.map(item => {
+        return {...item, ...getDimension(), src: item.thumbnail};
     });
 
     function getDimension() {
