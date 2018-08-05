@@ -5,7 +5,7 @@ class NavigationLogo extends Component {
         return (
             <div className="navbar-header">
                 <a className="navbar-brand page-scroll" href="/">
-                    <img src="/img/logo/logo.jpg" className="img-responsive" alt="Miller-Blum"/>
+                    <img src="/img/logo/logo.jpg" className="img-responsive" alt="Danielle"/>
                 </a>
             </div>
         );
