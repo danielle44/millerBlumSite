@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Measure from 'react-measure';
-import SelectedProject from './SelectedProject';
+import ProjectsItem from './ProjectsItem';
 import {addDimensions} from './DimensionsAdder';
 
 class ProjectsGrid extends React.Component {
@@ -45,7 +45,7 @@ class ProjectsGrid extends React.Component {
                             columns = 7;
                         }
                         return <div ref={measureRef}>
-                            <Gallery photos={this.state.projects} columns={columns} onClick={this.selectPhoto} ImageComponent={SelectedProject} />
+                            <Gallery photos={this.state.projects} columns={columns} onClick={this.selectPhoto} ImageComponent={ProjectsItem} />
                         </div>
                     }
                 }

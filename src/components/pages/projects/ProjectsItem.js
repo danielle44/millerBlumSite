@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectedProject = ({ photo: project }) => {
+const ProjectsItem = ({ photo: project }) => {
     return (
         <div className={`portfolio-item ${project.categories}`}>
             <div className='hover-bg'>
@@ -19,4 +19,4 @@ const SelectedProject = ({ photo: project }) => {
     )
 };
 
-export default SelectedProject;
+export default ProjectsItem;
