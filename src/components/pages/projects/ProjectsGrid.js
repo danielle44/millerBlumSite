@@ -11,6 +11,10 @@ class ProjectsGrid extends React.Component {
         this.state = { width: -1, projects: addDimensions(props.projects), selectAll: false };
     }
 
+    componentWillReceiveProps(newProps) {
+        this.setState({ projects: addDimensions(newProps.projects) });
+    }
+
     render() {
         const width = this.state.width;
         return (
