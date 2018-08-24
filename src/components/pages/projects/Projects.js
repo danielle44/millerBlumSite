@@ -13,7 +13,7 @@ class Projects extends Component {
 
     createFilterItem({ title, filter }) {
         return (
-            <li key={filter}><a data-filter={filter}>{title}</a></li>
+            <li key={filter} data-filter={filter} className='filter-item'><a>{title}</a></li>
         )
     }
 

@@ -2,3 +2,4 @@ scss
 colors in scss
 fix console errors
 split css files
+put isotope in the component
