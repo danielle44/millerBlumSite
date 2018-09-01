@@ -7,3 +7,6 @@ map with locations
 SEO
 put site in the web - domain name
 footer position
+path where we are in the site
+categories on the side
+projects gallery - title on the bottom on hover
