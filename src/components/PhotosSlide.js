@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import 'react-image-lightbox/style.css';
 
 export default class PhotosSlide extends Component {
     constructor(props) {
@@ -15,6 +15,7 @@ export default class PhotosSlide extends Component {
     render() {
         const { photoIndex, isOpen } = this.state;
         const images = this.props.images;
+        const title = this.props.title;
 
         return (
             <div>
@@ -27,6 +28,10 @@ export default class PhotosSlide extends Component {
                         mainSrc={images[photoIndex]}
                         nextSrc={images[(photoIndex + 1) % images.length]}
                         prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                        enableZoom={false}
+                        animationOnKeyInput={true}
+                        imageTitle={title}
+                        wrapperClassName={'photos-slide'}
                         onCloseRequest={() => this.setState({ isOpen: false })}
                         onMovePrevRequest={() =>
                             this.setState({
