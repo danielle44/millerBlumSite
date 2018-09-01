@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {projectCategoriesData} from '../../../mocks/projectCategories';
+import {get as getCategories} from '../../../providers/categoriesProvider';
 
 class ProjectsFilters extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class ProjectsFilters extends Component {
     }
 
     createFilters() {
-        let filters = projectCategoriesData
+        let filters = getCategories()
             .map((category) => ({
                 title: category.title,
                 filter: `${category.id}`

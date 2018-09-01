@@ -1,4 +1,4 @@
-import {projectsLightData} from '../../../mocks/projectsLight';
+import {projectsLightData} from '../mocks/projectsLight';
 
 export function get() {
     return getProjects();

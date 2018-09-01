@@ -2,4 +2,8 @@ scss
 colors in scss
 fix console errors
 split css files
-put isotope in the component
+multilanguage
+map with locations
+SEO
+put site in the web - domain name
+footer position

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {get as getAllProjects} from './ProjectsProvider';
+import {get as getAllProjects} from '../../../providers/projectsProvider';
 import ProjectsGrid from './ProjectsGrid';
 import ProjectsFilters from './ProjectsFilters';
 
