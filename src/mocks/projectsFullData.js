@@ -26,19 +26,39 @@ export const projectsFullData = {
         locationId: 1
     },
     3: {
-        title: 'A',
-        photos: []
+        title: 'Kiryat Rabin',
+        photos: [
+            "/img/projects/Kiryat Rabin/kiryat rabin bench.jpg",
+            "/img/projects/Kiryat Rabin/kiryat rabin stairs.jpg",
+            "/img/projects/Kiryat Rabin/kiryat rabin.jpg",
+            "/img/projects/Kiryat Rabin/kiryat rabin2.jpg",
+        ],
+        size: 2,
+        locationId: 1
     },
     4: {
-        title: 'A',
-        photos: []
+        title: 'Yavne G',
+        photos: [
+            "/img/projects/Yavne G/Yavne G - children.jpg",
+            "/img/projects/Yavne G/Yavne G - parking lot.jpg",
+            "/img/projects/Yavne G/Yavne G - shops.jpg",
+            "/img/projects/Yavne G/yavneG1.jpg",
+        ],
+        size: 30,
+        locationId: 3
     },
     5: {
-        title: 'A',
-        photos: []
+        title: 'Lebeniot',
+        photos: [
+            "/img/projects/Lebeniot/lebeniot.jpg",
+        ],
+        size: 40,
+        locationId: 0
     },
     6: {
-        title: 'A',
-        photos: []
+        title: 'Some Park',
+        photos: [
+            "/img/projects/Some Park/somePark.jpg",
+        ],
     }
 };
