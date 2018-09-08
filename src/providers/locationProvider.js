@@ -1,7 +1,8 @@
 import {locations} from '../mocks/locations';
 
-export function getLocationName(lightProject) {
-    let locationId = lightProject.locationId;
+export function getLocationName(locationId) {
+    if (!locationId) return 'unknown';
+
     let location = locations.find(location => location.id === locationId);
 
     if (!location) {

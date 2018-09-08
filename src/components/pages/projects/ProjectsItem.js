@@ -9,7 +9,7 @@ const ProjectsItem = ({ photo: project }) => {
             <Link to={`/projects/${project.id}`} className="page-scroll">
                 <div className='hover-bg'>
                     <div className="hover-text">
-                        <h4>{project.title} - size: {getSizeLetter(project)} - location: {getLocationName(project)}</h4>
+                        <h4>{project.title} - size: {getSizeLetter(project.size)} - location: {getLocationName(project.locationId)}</h4>
                     </div>
 
                         <img
