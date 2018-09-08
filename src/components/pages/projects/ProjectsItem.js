@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {getLocationName} from "../../../providers/locationProvider";
+import {getSizeLetter} from "../../../providers/sizeProvider";
 
 const ProjectsItem = ({ photo: project }) => {
     return (
@@ -7,7 +9,7 @@ const ProjectsItem = ({ photo: project }) => {
             <Link to={`/projects/${project.id}`} className="page-scroll">
                 <div className='hover-bg'>
                     <div className="hover-text">
-                        <h4>{project.title}</h4>
+                        <h4>{project.title} - size: {getSizeLetter(project)} - location: {getLocationName(project)}</h4>
                     </div>
 
                         <img

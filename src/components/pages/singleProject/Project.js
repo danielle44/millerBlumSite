@@ -15,6 +15,7 @@ class Project extends Component {
                     <div className="section-title text-center center">
                         <h2>PROJECT {this.project.id}</h2>
                         <h2>{this.project.title}</h2>
+
                         <PhotosSlide images={this.project.photos} title={this.project.title}/>
                         <hr/>
                     </div>

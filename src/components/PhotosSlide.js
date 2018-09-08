@@ -7,7 +7,7 @@ export default class PhotosSlide extends Component {
         super(props);
 
         this.state = {
-            photoIndex: 0,
+            photoIndex: props.index | 0,
             isOpen: false,
         };
     }
