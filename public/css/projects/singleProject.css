@@ -1,3 +1,8 @@
+#lightboxBackdrop {
+    background: #ddd !important;
+    opacity: 1 !important;
+}
+
 .photos-slide {
     background: white !important;
     opacity: 1 !important;
