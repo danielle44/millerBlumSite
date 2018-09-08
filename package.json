@@ -6,7 +6,6 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-grid-gallery": "^0.5.1",
-    "react-image-lightbox": "^5.0.0",
     "react-measure": "^2.0.2",
     "react-photo-gallery": "^6.0.29",
     "react-router-dom": "^4.3.1",

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {get as getSingleProject} from '../../../providers/singleProjectProvider';
-import PhotosSlide from '../../PhotosSlide';
 import {getSizeLetter} from "../../../providers/sizeProvider";
 import {getLocationName} from "../../../providers/locationProvider";
 import PhotosLine from './PhotosLine'
@@ -25,7 +24,6 @@ class Project extends Component {
                         <div>size: {this.project.size} cm² ({getSizeLetter(this.project.size)})</div>
                         <div>location: {getLocationName(this.project.locationId)}</div>
 
-                        <PhotosSlide images={this.project.photos} title={this.project.title}/>
                         <PhotosLine/>
                         <hr/>
                     </div>
