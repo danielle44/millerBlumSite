@@ -6,39 +6,20 @@ class PhotosLine extends Component {
     constructor(props){
         super(props);
 
-        let images = [
-            {
-                src: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Biblical_Zoo_1940s.jpg",
-                thumbnail: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Biblical_Zoo_1940s.jpg",
-                thumbnailWidth: 240,
-                thumbnailHeight: 240,
-            },
-            {
-                src: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Zoo_lake.jpg",
-                thumbnail: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Zoo_lake.jpg",
-                thumbnailWidth: 240,
-                thumbnailHeight: 240,
-            },
-            {
-                src: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Zoo_spider_monkey.jpg",
-                thumbnail: "/img/projects/Jerusalem Biblical Zoo/Jerusalem_Zoo_spider_monkey.jpg",
-                thumbnailWidth: 240,
-                thumbnailHeight: 240,
-            },
-            {
-                src: "/img/projects/Jerusalem Biblical Zoo/Teddy_Jerusalem_Zoo.jpg",
-                thumbnail: "/img/projects/Jerusalem Biblical Zoo/Teddy_Jerusalem_Zoo.jpg",
-                thumbnailWidth: 240,
-                thumbnailHeight: 240,
-            }
-        ];
+        this.decorateImages = this.decorateImages.bind(this);
 
         this.state = {
-            images: images
+            images: this.decorateImages(this.props.images)
         };
-        // this.state = {
-        //     images: this.props.images
-        // };
+    }
+
+    decorateImages(images) {
+        return images.map(imageUrl => ({
+            src: imageUrl,
+            thumbnail: imageUrl,
+            thumbnailWidth: 240,
+            thumbnailHeight: 240
+        }));
     }
 
     render () {

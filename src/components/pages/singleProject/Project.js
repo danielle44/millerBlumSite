@@ -24,7 +24,7 @@ class Project extends Component {
                         <div>size: {this.project.size} cm² ({getSizeLetter(this.project.size)})</div>
                         <div>location: {getLocationName(this.project.locationId)}</div>
 
-                        <PhotosLine/>
+                        <PhotosLine images={this.project.photos}/>
                         <hr/>
                     </div>
                 </div>
