@@ -9,19 +9,21 @@ class App extends Component {
     return (
         <div id="page-top" className="App" data-spy="scroll" data-target=".navbar-fixed-top">
 
-            <Router>
-                <div>
-                    <Navigation/>
-                    <div id='#content'>
-                        <Route exact path="/" component={Intro} />
-                        <Route exact path="/projects" component={Projects} />
-                        <Route path="/projects/:id" component={Project} />
-                        <Route path="/about" component={About} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/clients" component={Clients} />
+            <div className="above-footer">
+                <Router>
+                    <div>
+                        <Navigation/>
+                        <div id='#content'>
+                            <Route exact path="/" component={Intro} />
+                            <Route exact path="/projects" component={Projects} />
+                            <Route path="/projects/:id" component={Project} />
+                            <Route path="/about" component={About} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/clients" component={Clients} />
+                        </div>
                     </div>
-                </div>
-            </Router>
+                </Router>
+            </div>
             <Footer/>
 
         </div>

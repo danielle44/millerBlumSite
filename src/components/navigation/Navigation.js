@@ -23,6 +23,7 @@ class Navigation extends Component {
 
     render() {
         return (
+            <div className="header">
             <nav id="menu" className="navbar navbar-default navbar-fixed-top on">
                 <div className="container">
 
@@ -35,6 +36,7 @@ class Navigation extends Component {
                     </div>
                 </div>
             </nav>
+            </div>
         );
     }
 }
