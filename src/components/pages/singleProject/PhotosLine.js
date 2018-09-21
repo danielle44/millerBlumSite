@@ -17,26 +17,36 @@ class PhotosLine extends Component {
         return images.map(imageUrl => ({
             src: imageUrl,
             thumbnail: imageUrl,
-            thumbnailWidth: 240,
-            thumbnailHeight: 240
+            thumbnailWidth: 228,
+            thumbnailHeight: 228
         }));
     }
 
     render () {
-        return (
-            <div style={{
-                display: "block",
-                minHeight: "1px",
+        let tileStyle = function() {
+            return {};
+        };
+
+
+        let imgSstyle = function() {
+            return {
+                border: "4px solid black",
                 width: "100%",
-                border: "1px solid #ddd",
-                overflow: "auto"}}>
+                height: "100%",
+            };
+        };
+
+        return (
+            <div className='photos-line'>
                 <Gallery
                     images={this.state.images}
                     enableImageSelection={false}
                     backdropClosesModal={true}
                     currentImage={this.props.index | 0}
                     showCloseButton={false}
-                    margin={6}
+                    margin={2}
+                    tileViewportStyle={tileStyle}
+                    thumbnailStyle={imgSstyle}
                 />
             </div>
         );

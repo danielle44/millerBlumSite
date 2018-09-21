@@ -15,7 +15,8 @@ class Project extends Component {
             <div id="project" className='page'>
                 <div className="container">
                     <div className="section-title text-center center">
-                        <h2>PROJECT {this.project.id}</h2>
+                        <h2>{this.project.title}</h2>
+                        <hr/>
                     </div>
                     <div className={"project-info"}>
                         <div>desc: {this.project.desc}</div>
@@ -25,7 +26,7 @@ class Project extends Component {
                         <div>location: {getLocationName(this.project.locationId)}</div>
 
                         <PhotosLine images={this.project.photos}/>
-                        <hr/>
+
                     </div>
                 </div>
             </div>
