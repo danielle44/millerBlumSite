@@ -24,15 +24,19 @@ class PhotosLine extends Component {
 
     render () {
         let tileStyle = function() {
-            return {};
+            return {
+                background: "#f6f6f6"
+            };
         };
 
 
         let imgSstyle = function() {
             return {
-                border: "4px solid black",
+                border: "2px solid #666",
                 width: "100%",
                 height: "100%",
+                cursor: "pointer",
+                marginBottom: "30px"
             };
         };
 

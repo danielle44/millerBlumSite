@@ -1,0 +1,32 @@
+#about .about-text {
+    margin-left: 10px;
+}
+#about .about-text h3 {
+    font-weight: 400;
+    color: #ffffff;
+}
+#about img {
+    float: right;
+}
+#about p {
+    margin: 30px 0;
+    line-height: 22px;
+}
+#about img {
+    height: 650px;
+}
+#about .about-text {
+    background-color: #9cc932;
+    left: -150px;
+    top: 90px;
+    padding: 57px 79px;
+    max-width: 520px;
+    display: inline-block;
+    position: absolute;
+}
+@media (max-width: 1024px) {
+    #about img {
+        float: left;
+        margin-bottom: 20px;
+    }
+}

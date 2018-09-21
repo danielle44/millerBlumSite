@@ -3,8 +3,50 @@
     opacity: 1 !important;
 }
 
-.photos-line {
-    width: 400px;
-    float: right;
-    border: 1px solid #ddd;
+.project-info {
+    border: 2px solid #666;
+    background: #9cc932;
+    padding: 10px;
+}
+
+.project-photos {
+    vertical-align: top;
+}
+
+@media screen and (max-width: 600px)
+{
+    .project-info, .project-photos
+    {
+        max-width: 100%;
+    }
+}
+
+.project-info-key-value {
+    padding: 0 10px 0 10px;
+    margin: 30px 0;
+}
+
+.project-info-key {
+    text-transform: capitalize;
+    color: white;
+    size: #ffffff;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.project-info-value {
+    font-size: 15px;
+    color: #666;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.project-photos .tile img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.project-photos .tile img:hover {
+    -webkit-filter: none;
+    filter: none;
 }
