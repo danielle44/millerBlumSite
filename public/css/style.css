@@ -178,11 +178,7 @@ hr {
 	font-size: 28px;
 	font-weight: 300;
 }
-header .intro-text {
-	padding-top: 250px;
-	padding-bottom: 200px;
-	padding-left: 100px;
-}
+
 /* Services Section */
 #services h4 {
 	color: #9cc932;
@@ -401,7 +397,7 @@ img.black-and-white {
 }
 
 .above-footer {
-	min-height: calc(100vh - 50px);
+	min-height: 918px;
 }
 .footer {
 	height: 50px;
