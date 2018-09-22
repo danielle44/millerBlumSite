@@ -2,33 +2,39 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Footer, Navigation, About, Projects, Contact, Clients, Intro, Project } from './components';
+import { initLanguage } from './i18n/languageSetter';
 
 class App extends Component {
 
-  render() {
-    return (
-        <div id="page-top" className="App" data-spy="scroll" data-target=".navbar-fixed-top">
+    constructor(props) {
+        super(props);
+        initLanguage();
+    }
 
-            <div className="above-footer">
-                <Router>
-                    <div>
-                        <Navigation/>
-                        <div id='#content' className='content'>
-                            <Route exact path="/" component={Intro} />
-                            <Route exact path="/projects" component={Projects} />
-                            <Route path="/projects/:id" component={Project} />
-                            <Route path="/about" component={About} />
-                            <Route path="/contact" component={Contact} />
-                            <Route path="/clients" component={Clients} />
+    render() {
+        return (
+            <div id="page-top" className="App" data-spy="scroll" data-target=".navbar-fixed-top">
+
+                <div className="above-footer">
+                    <Router>
+                        <div>
+                            <Navigation/>
+                            <div id='#content' className='content'>
+                                <Route exact path="/" component={Intro} />
+                                <Route exact path="/projects" component={Projects} />
+                                <Route path="/projects/:id" component={Project} />
+                                <Route path="/about" component={About} />
+                                <Route path="/contact" component={Contact} />
+                                <Route path="/clients" component={Clients} />
+                            </div>
                         </div>
-                    </div>
-                </Router>
-            </div>
-            <Footer/>
+                    </Router>
+                </div>
+                <Footer/>
 
-        </div>
-    );
-  }
+            </div>
+        );
+    }
 }
 
 export default App;

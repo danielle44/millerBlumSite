@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import strings from '../../../i18n/strings';
 
 class IntroImage extends Component {
 
@@ -21,8 +22,8 @@ class IntroImage extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="intro-text"> <span>Welcome to</span>
-                                <h1>Miller-Blum</h1>
-                                <p>Landscape Architecture</p>
+                                <h1>{strings.brand.name}</h1>
+                                <p>{strings.brand.landArchitecture}</p>
                             </div>
                         </div>
                     </div>

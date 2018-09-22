@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavigationLogo from './NavigationLogo';
 import NavigationItem from './NavigationItem';
+import LanguageChanger from './LanguageChanger';
 
 const navItems = [
     { route: "/projects", title: "Projects" },
@@ -24,18 +25,19 @@ class Navigation extends Component {
     render() {
         return (
             <div className="header">
-            <nav id="menu" className="navbar navbar-default navbar-fixed-top on">
-                <div className="container">
+                <nav id="menu" className="navbar navbar-default navbar-fixed-top on">
+                    <div className="container">
 
-                    <NavigationLogo/>
+                        <NavigationLogo/>
 
-                    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul className="nav navbar-nav navbar-right">
-                            {navItems.map(this.createNavItem)}
-                        </ul>
+                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul className="nav navbar-nav navbar-right">
+                                {navItems.map(this.createNavItem)}
+                                <li><LanguageChanger/></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
             </div>
         );
     }
