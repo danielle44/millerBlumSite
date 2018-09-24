@@ -6,6 +6,7 @@ import Projects from './pages/projects/Projects';
 import Contact from './pages/Contact';
 import Clients from './pages/clients/Clients';
 import Project from './pages/singleProject/Project';
+import ChartPage from './pages/chart/ChartPage';
 
 export {
     Footer,
@@ -15,5 +16,6 @@ export {
     Projects,
     Contact,
     Clients,
-    Project
+    Project,
+    ChartPage
 };
