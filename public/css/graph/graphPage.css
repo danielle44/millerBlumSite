@@ -21,3 +21,30 @@
 .fill {
     fill: grey;
 }
+
+g.graph-line {
+    stroke-width: 0.6;
+}
+
+g.graph-line:hover {
+    stroke-width: 1.2;
+    stroke-opacity: 0.6;
+}
+
+g.graph-line:hover circle {
+    r: 1.67;
+    stroke-width: 1;
+}
+
+g.graph-line:not(:hover) circle {
+    stroke: black;
+}
+
+g.graph-line path {
+    fill: transparent;
+}
+
+g.graph-line circle {
+    r: 0.65;
+    fill: black;
+}

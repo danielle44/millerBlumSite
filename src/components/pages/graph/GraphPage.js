@@ -26,7 +26,7 @@ class GraphPage extends Component {
         for (let i=1; i<points.length; i++) {
             point = points[i];
             dValue = curved(lastPoint.x, lastPoint.y, point.x, point.y);
-            path = <path key={dValue} d={dValue} stroke={color} fill="transparent"></path>;
+            path = <path key={dValue} d={dValue} stroke={color}></path>;
             paths.push(path);
             lastPoint = point;
         }
@@ -35,18 +35,18 @@ class GraphPage extends Component {
     }
 
 
-    createPointElem(point) {
+    createPointElem(point, color) {
         let { x, y } = point;
-        return <circle key={`point_${x}_${y}`} cx={x} cy={y} stroke="black" r="0.65"/>;
+        return <circle key={`point_${x}_${y}`} cx={x} cy={y} stroke={color}/>;
     }
 
     generateLines(pointsByColor) {
         return Object.keys(pointsByColor).map((color) => {
             let points = pointsByColor[color];
 
-            return <g key={color} id={`line-${color}`} strokeWidth="0.4">
-                {points.map(this.createPointElem)}
+            return <g className="graph-line" key={color} id={`line-${color}`}>
                 {this.generatePaths(points, color)}
+                {points.map((point) => this.createPointElem(point, color))}
             </g>
         });
     }
