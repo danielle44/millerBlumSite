@@ -3,77 +3,43 @@ import {Doughnut} from 'react-chartjs-2';
 
 class ChartPage extends Component {
     render() {
+        let types = [
+            { parent: 'P1', children: ['P1-A', 'P1-B', 'P1-C', 'P1-D'], color: "#FF9900" },
+            { parent: 'P2', children: ['P2-A', 'P2-B'], color: "#DC3912" },
+            { parent: 'P3', children: ['P3-A', 'P3-B', 'P3-C'], color: "#990099" }
+        ];
+        let hoverColor = "black";
+        let emptyColor = "#f6f6f6";
+
+
+        let getChildrenLabel = function(type) {
+            return type.children;
+        };
+
+        let getChildrenCount = function(type) {
+            return type.children.length;
+        };
+
+        let childrenLabels = getChildrenLabel(types[0]);
+
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let allChildrenCount = types.map(type => type.children.length).reduce(reducer, 0);
+        let p1ChildrenCount = getChildrenCount(types[0]);
+
 
         let data =  {
             datasets: [{
-                backgroundColor: [
-                    "#3366CC",
-                    "#DC3912",
-                    "#FF9900",
-                    "#109618",
-                    "#990099",
-                    "#3B3EAC"
-                ],
-                hoverBackgroundColor: [
-                    "black",
-                    "black",
-                    "black",
-                    "black",
-                    "black",
-                    "black"
-                ],
-                data: [
-                    0,
-                    0,
-                    8,
-                    10,
-                    84,
-                    4
-                ]
+                backgroundColor: types[0].children.map(p1Child => types[0].color),
+                hoverBackgroundColor: types[0].children.map(p1Child => hoverColor),
+                data: types[0].children.map(p1Child => 1).concat(allChildrenCount-p1ChildrenCount)
             },
             {
-                backgroundColor: [
-                    "#3366CC",
-                    "#DC3912",
-                    "#f6f6f6"
-                ],
-                hoverBackgroundColor: [
-                    "black",
-                    "black",
-                    "#f6f6f6"
-                ],
-                data: [
-                    8,
-                    99,
-                    200
-                ]
-            },
-            {
-                backgroundColor: [
-                    "#3366CC",
-                    "#DC3912",
-                    "#f6f6f6"
-                ],
-                hoverBackgroundColor: [
-                    "black",
-                    "black",
-                    "#f6f6f6"
-                ],
-                data: [
-                    8,
-                    99,
-                    200
-                ]
+                backgroundColor: (childrenLabels.map(child => emptyColor)).concat(types.map(type => type.color)),
+                hoverBackgroundColor: (childrenLabels.map(child => emptyColor)).concat(types.map(type => hoverColor)),
+                data: (childrenLabels.map(child => 0)).concat(types.map(type => type.children.length))
             }
             ],
-            labels: [
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F"
-            ]
+            labels: childrenLabels.concat(types.map(type => type.parent))
         };
 
         return (
