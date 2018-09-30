@@ -20,12 +20,12 @@ class GraphPage extends Component {
         }
 
         let lastPoint = points[0];
-        let path, point;
+        let path, point, dValue;
 
         for (let i=1; i<points.length; i++) {
             point = points[i];
-            let dValue = curved(lastPoint.x, lastPoint.y, point.x, point.y);
-            let path = <path key={dValue} d={dValue} stroke={color} fill="transparent"></path>;
+            dValue = curved(lastPoint.x, lastPoint.y, point.x, point.y);
+            path = <path key={dValue} d={dValue} stroke={color} fill="transparent"></path>;
             paths.push(path);
             lastPoint = point;
         }
@@ -43,7 +43,7 @@ class GraphPage extends Component {
         return Object.keys(pointsByColor).map((color) => {
             let points = pointsByColor[color];
 
-            return <g key={color} stroke-width="0.4">
+            return <g key={color} strokeWidth="0.4">
                 {points.map(this.createPointElem)}
                 {this.generatePaths(points, color)}
             </g>

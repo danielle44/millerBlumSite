@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {get as getSingleProject} from '../../../providers/singleProjectProvider';
-import {getSizeLetter} from "../../../providers/sizeProvider";
-import {getLocationName} from "../../../providers/locationProvider";
 import PhotosLine from './PhotosLine';
 import ProjectInfo from './ProjectInfo';
 
