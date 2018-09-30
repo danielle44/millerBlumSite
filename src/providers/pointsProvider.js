@@ -1,32 +1,32 @@
 let bluePoints = [
-    {x: 10, y: 80},
-    {x: 30, y: 90},
-    {x: 40, y: 40},
-    {x: 70, y: 30},
-    {x: 90, y: 85}
+    {x: 10, y: 30},
+    {x: 30, y: 20},
+    {x: 140, y: 40},
+    {x: 70, y: 35},
+    {x: 190, y: 60}
 ];
 
 let redPoints = [
     {x: 1, y: 8},
-    {x: 30, y: 95},
+    {x: 30, y: 44},
     {x: 40, y: 40},
-    {x: 60, y: 70},
+    {x: 160, y: 56},
     {x: 80, y: 20}
 ];
 
 let greenPoints = [
-    {x: 20, y: 70},
+    {x: 120, y: 10},
     {x: 50, y: 60},
     {x: 40, y: 10},
-    {x: 5, y: 85},
+    {x: 105, y: 35},
     {x: 90, y: 25}
 ];
 
 function getData() {
     return {
-        blue: bluePoints,
-        red: redPoints,
-        green: greenPoints
+        "#40e0d0": bluePoints,
+        "#ffd700": redPoints,
+        "#ff4500": greenPoints
     };
 }
 

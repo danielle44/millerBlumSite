@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import curved from "svg-line-curved";
 import {get as getPointsByColor} from '../../../providers/pointsProvider';
+import consts from '../../../consts';
 
 class GraphPage extends Component {
 
@@ -43,7 +44,7 @@ class GraphPage extends Component {
         return Object.keys(pointsByColor).map((color) => {
             let points = pointsByColor[color];
 
-            return <g key={color} strokeWidth="0.4">
+            return <g key={color} id={`line-${color}`} strokeWidth="0.4">
                 {points.map(this.createPointElem)}
                 {this.generatePaths(points, color)}
             </g>
@@ -52,11 +53,12 @@ class GraphPage extends Component {
 
     render() {
         let pointsByColor = getPointsByColor();
+        let { width, height } = consts.graph;
 
         return (
             <div id="graph-page" className='page'>
                 <figure className="theimage">
-                    <svg id="custom-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <svg id="custom-shape" xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} ${height}`}>
 
                         {this.generateLines(pointsByColor)}
 
