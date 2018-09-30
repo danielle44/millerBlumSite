@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Footer, Navigation, About, Projects, Contact, Clients, Intro, Project, ChartPage } from './components';
+import { Footer, Navigation, About, Projects, Contact, Clients, Intro, Project, ChartPage, GraphPage } from './components';
 import { initLanguage } from './i18n/languageSetter';
 
 class App extends Component {
@@ -27,6 +27,7 @@ class App extends Component {
                                 <Route path="/contact" component={Contact} />
                                 <Route path="/clients" component={Clients} />
                                 <Route path="/chart" component={ChartPage} />
+                                <Route path="/graph" component={GraphPage} />
                             </div>
                         </div>
                     </Router>

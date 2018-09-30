@@ -8,7 +8,8 @@ const navItems = [
     { route: "/about", title: "About Us" },
     { route: "/contact", title: "Contact Us" },
     { route: "/clients", title: "Clients" },
-    { route: "/chart", title: "Chart" }
+    { route: "/chart", title: "Chart" },
+    { route: "/graph", title: "Graph" },
 ];
 
 class Navigation extends Component {
