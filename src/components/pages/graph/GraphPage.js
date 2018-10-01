@@ -11,14 +11,28 @@ class GraphPage extends Component {
         this.generatePaths = this.generatePaths.bind(this);
         this.createPointElem = this.createPointElem.bind(this);
         this.generateLines = this.generateLines.bind(this);
+        this.getPrePostPoints = this.getPrePostPoints.bind(this);
+    }
+
+    getPrePostPoints(points) {
+        let firstPoint = points[0];
+        let lastPoint = points[points.length - 1];
+
+        let prePoint = { x: firstPoint.x - 10, y: firstPoint.y - 10 };
+        let postPoint = { x: lastPoint.x + 10, y: lastPoint.y + 3 };
+
+        return [prePoint, postPoint];
     }
 
     generatePaths(points, color) {
         let paths = [];
 
-        if (points.length <= 1) {
+        if (points.length === 0) {
             return paths;
         }
+
+        let [prePoint, postPoint] = this.getPrePostPoints(points);
+        points = [prePoint, ...points, postPoint];
 
         let lastPoint = points[0];
         let path, point, dValue;
