@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {get as getAllProjects} from '../../../providers/projectsProvider';
-import ProjectsGrid from './ProjectsGrid';
+import ProjectsGridExample from './ProjectsGridExample';
 import ProjectsFilters from './ProjectsFilters';
 
 class Projects extends Component {
@@ -42,7 +42,7 @@ class Projects extends Component {
 
                     <div className="row">
                         <div className="portfolio-items">
-                            <ProjectsGrid projects={this.getFilteredProjects()} />
+                            <ProjectsGridExample projects={this.getFilteredProjects()} />
                         </div>
                     </div>
 

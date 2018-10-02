@@ -30,3 +30,8 @@ ol.type li a:hover {
     padding: 5px;
     color: #E87E04;
 }
+
+#portfolio .container .row {
+    margin-left: -370px;
+    width: 1875px;
+}

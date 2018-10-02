@@ -102,6 +102,10 @@ hr {
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: #9cc932;
 }
+
+#menu .container {
+	width: 1786px;
+}
 .on {
 	background-color: rgba(0,0,0,0.8) !important;
 	padding: 0 !important;
@@ -371,6 +375,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 .hidden {
 	display:none;
+}
+
+.header #menu .navbar-header {
+	margin-left: 65px;
 }
 
 .navbar-header .navbar-brand {

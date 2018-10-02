@@ -9,9 +9,9 @@ export function get() {
 
     function getProjects() {
         let projects = deepClone(projectsLightData)
-            .concat(deepClone(projectsLightData))
-            .concat(deepClone(projectsLightData))
-            .concat(deepClone(projectsLightData));
+            // .concat(deepClone(projectsLightData))
+            // .concat(deepClone(projectsLightData))
+            // .concat(deepClone(projectsLightData));
 
         projects = shuffle(projects);
         for (let i = 0; i<projects.length; i++) {
